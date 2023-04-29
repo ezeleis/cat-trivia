@@ -8,14 +8,17 @@ import { HttpClient } from '@angular/common/http';
 })
 export class HomeComponent {
   catFacts: any;
-
+  
   constructor(private http: HttpClient) {}
 
   ngOnInit() {
-    this.http.get('https://cat-fact.herokuapp.com/facts').subscribe(data => {
-      this.catFacts = data;
-    });
+    this.http.get('https://cat-fact.herokuapp.com/facts/random?animal_type=cat').subscribe((data: any) => {
+  this.catFacts = data.text;
+  console.log(data);
+  });
+
   }
+  
 
   imagem() {
     console.log('imagem para test');
