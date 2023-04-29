@@ -8,23 +8,21 @@ import { HttpClient } from '@angular/common/http';
 })
 export class HomeComponent {
   catFacts: any;
-  
+  catImg:any;
   constructor(private http: HttpClient) {}
 
   ngOnInit() {
+
+  }
+  image(){
+    this.http.get('https://api.thecatapi.com/v1/images/search').subscribe((data: any) => {
+  this.catImg = data[0].url;
+    });
+  }
+
+  phrase() {
     this.http.get('https://cat-fact.herokuapp.com/facts/random?animal_type=cat').subscribe((data: any) => {
-  this.catFacts = data.text;
-  console.log(data);
-  });
-
-  }
-  
-
-  imagem() {
-    console.log('imagem para test');
-  }
-
-  gif() {
-    console.log('gif para teste');
+      this.catFacts = data.text;
+      });
   }
 }

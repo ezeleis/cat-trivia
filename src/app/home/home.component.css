@@ -1,0 +1,23 @@
+.home-title {
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .home-image {
+    display: block;
+    margin: 0 auto;
+  }
+
+.home-buttons{
+    position:fixed;
+    bottom:0;
+    left:40%;
+}
+.toast {
+    position: absolute;
+    top: 0;
+    right:40%;
+  }
+  
