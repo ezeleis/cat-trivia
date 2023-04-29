@@ -18,10 +18,10 @@ export class HomeComponent {
   }
 
   imagem() {
-    console.log('imagem');
+    console.log('imagem para test');
   }
 
   gif() {
-    console.log('gif');
+    console.log('gif para teste');
   }
 }
